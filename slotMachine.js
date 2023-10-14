@@ -51,4 +51,4 @@ function getBet(balance) {
 
 let balance = deposite();
 const numberOfLines = getNumberOfLines();
-const bet = getBet();
+const bet = getBet(balance, numberOfLines);
