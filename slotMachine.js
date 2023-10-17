@@ -160,5 +160,4 @@ const game = () => {
     if (playAgain != "y") break;
   }
 };
-
 game();
