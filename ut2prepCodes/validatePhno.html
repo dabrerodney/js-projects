@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var phoneNo = prompt("Enter Phone No: ");
+      //pattern 1
+      var pattern1 = /^[(]\d{3,3}[)]-\d{4,4}-\d{4,4}$/;
+      //pattern2
+      var pattern2 = /^\d{3,3}.\d{4,4}.\d{4,4}$/;
+      //check the pattern with the phone no
+      var result = pattern1.test(phoneNo) || pattern2.test(phoneNo);
+      if (result) {
+        prompt("Valide phone no");
+      } else {
+        prompt("Invalid phone no");
+      }
+    </script>
+  </body>
+</html>

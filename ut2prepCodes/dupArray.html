@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var count = 0;
+      var arr1 = new Array();
+      var arr = [10, 20, 30, 20, 40, 10, 40];
+      //checking for duplicate element
+      for (var i = 0; i < arr.length; i++) {
+        var duplicate = true;
+        for (var j = i + 1; j < arr.length; j++) {
+          if (arr[i] == arr[j]) {
+            duplicate = true;
+          }
+        }
+        if (!arr1.includes(arr[i])) {
+          arr1.push(arr[i]);
+          count++;
+        }
+      }
+      //printing the result
+      document.write("duplicate count = " + count);
+      document.write(arr1.toString());
+    </script>
+  </body>
+</html>

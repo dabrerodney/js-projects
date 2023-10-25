@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button">Enter the color</button>
+    <script>
+      function change() {
+        var color = prompt("Enter the color of the Background: ");
+        if (color) {
+          document.body.style.backgroundColor = color;
+        }
+      }
+      var button = document.getElementById("button");
+      button.addEventListener("click", change);
+    </script>
+  </body>
+</html>

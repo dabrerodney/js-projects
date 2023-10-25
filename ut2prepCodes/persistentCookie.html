@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body onload="getCookie()">
+    <form action="">
+      <label for="">Enter Name : </label>
+      <input type="text" id="name" /><br /><br />
+      <input type="button" value="set" onclick="setCookie()" />
+      <p id="content"></p>
+      <script>
+        function setCookie() {
+          var expires = new Date(Date.now() + 24 * 60 * 60 * 1000 ).toUTCString();
+
+          document.cookie = "itemName = " + document.getElementById("name").value + "expires = " + expires;
+          getCookie();
+        }
+        function getCookie() {
+          var cookiearray = document.cookie; 
+          cookiearray = cookiearray.split("=");
+          if (cookiearray[0] == "itemName")
+            document.getElementById("content").innerHTML = "Previous Data <br>" + cookiearray[1];
+          else
+            document.getElementById("content").innerHTML = "cookie not found";
+        }
+      </script>
+    </form>
+  </body>
+</html>
